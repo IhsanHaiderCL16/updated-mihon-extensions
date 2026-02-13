@@ -100,7 +100,7 @@ class ChapterDto(val content: List<Book>) {
         }
 
         companion object {
-            val dateFormat = SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH)
+            val dateFormat = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss", Locale.ENGLISH)
         }
     }
 }
@@ -112,5 +112,5 @@ class ChallengeDto(
     @SerialName("cache_url")
     val cacheUrl: String,
     @SerialName("page_mapping")
-    val pageMapping: Map<String, String>,
+    val pageMapping: Map<Int, String>,
 )
