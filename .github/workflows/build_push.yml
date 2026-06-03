@@ -34,6 +34,7 @@ jobs:
 
       - name: Build Kagane
         run: |
+          ./gradlew :src:en:kagane:spotlessApply
           ./gradlew :src:en:kagane:assembleRelease
 
       - name: Upload APK
