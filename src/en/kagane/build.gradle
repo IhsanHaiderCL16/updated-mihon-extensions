@@ -1,12 +1,13 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlinx-serialization'
+
 ext {
     extName = 'Kagane'
+    pkgNameSuffix = 'en.kagane'
     extClass = '.Kagane'
-    extVersionCode = 24
+    extVersionCode = 18
     isNsfw = true
 }
 
-apply plugin: "kei.plugins.extension.legacy"
-
-dependencies {
-    compileOnly("com.squareup.okhttp3:okhttp-brotli:5.0.0-alpha.11")
-}
+apply from: "$rootDir/common.gradle"
